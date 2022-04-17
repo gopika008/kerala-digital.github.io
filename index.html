@@ -328,7 +328,7 @@
 									<div class="new-arrival-cart">
 										<p>
 											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
+											<button onclick="gotowhatsapp()">Order Now</button>
 										</p>
 										<p class="arrival-review pull-right">
 											<span class="lnr lnr-heart"></span>
@@ -336,8 +336,34 @@
 										</p>
 									</div>
 								</div>
-								<h4><a href="#">Gas Stove</a></h4>
-								<p class="arrival-product-price">$3500.00</p>
+								<br>
+								<h4>
+									<input
+								type="text"
+								name="name1"
+								id="name1"
+								style="border: none;
+								border-color: transparent;
+								text-align: center;
+								"
+							
+								value="Plums (Three Burner Gas Stove - Reguler Model)"
+								readonly
+							  />Gas Stove
+								</h4> 
+							  <input
+							  type="text"
+							  name="rate"
+							  id="rate"
+							  style="border: none;
+								border-color: transparent;
+								text-align: center;
+								"
+						      
+							  value="₹ 3500"
+							  readonly
+							/>
+								
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
@@ -738,9 +764,24 @@
 		<!--footer end-->
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
+		<script>
+			function gotowhatsapp() {
+				
+				var name = document.getElementById("name1").value;
+				var rate = document.getElementById("rate").value;
+						
+				var url = "https://wa.me/917510693186?text=" 
+				+ "Product Name : " + name + "%0a"
+				+ "Price : " + rate + "%0a"
+				
+			
+				window.open(url, '_blank').focus();
+			}
+			</script>
 		<script src="assets/js/jquery.js"></script>
-        
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		
